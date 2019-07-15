@@ -1,0 +1,270 @@
+@import "_fonts.less";
+@import "smart-grid.less";
+@import "_colors.less";
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+
+}
+
+.reset();
+
+.header {
+    width: 100%;
+    height: 100px;
+    background-color: rgba(53, 63, 71, .8);
+    position: fixed;
+    z-index: 100;
+
+
+    &__inner {
+        .wrapper();
+        .row-flex();
+        margin: auto;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+    }
+
+    &__logo {
+        a {
+            color: rgb(255, 255, 255);
+            font-family: "Segoe UI";
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 24px;
+            text-transform: uppercase;
+            text-decoration: none;
+
+            span {
+                color: rgb(75, 202, 255);
+            }
+        }
+    }
+
+    .nav {
+        ul {
+            display: flex;
+            justify-content: space-between;
+            width: 580px;
+        }
+
+
+        &__link {
+            color: rgb(255, 255, 255);
+            font-family: "Segoe UI";
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 24px;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 10px 20px;
+
+            &:hover {
+                outline: 2px solid rgb(75, 202, 255);
+                color: rgb(75, 202, 255);
+                transition: color 0.2s linear;
+            }
+        }
+
+
+    }
+}
+
+.intro {
+    height: 100vh;
+    width: 100%;
+    background-image: url(../img/intro-img.jpg);
+    background-color: #c7b39b;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &__title {
+        text-align: center;
+
+        h1 {
+            display: inline;
+            color: rgb(255, 255, 255);
+            background-color: rgba(53, 63, 71, .7);
+            font-family: "Segoe UI";
+            font-size: 42px;
+            font-weight: 300;
+            line-height: 75px;
+            text-transform: uppercase;
+        }
+    }
+
+    &__overlay {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: rgba(53, 63, 71, .6);
+    }
+}
+
+main {
+
+    .services {
+        background-color: rgb(75, 202, 255);
+
+        &__inner {
+            .wrapper();
+
+            .services__title {
+                padding-top: 80px;
+                padding-bottom: 15px;
+
+                h2 {
+                    color: rgb(255, 255, 255);
+                    font-family: "Segoe UI";
+                    font-size: 30px;
+                    font-weight: 300;
+                    line-height: 24px;
+                    text-transform: uppercase;
+
+                }
+
+                hr {
+                    width: 45px;
+                    height: 2px;
+                    background: rgb(255, 255, 255);
+                    border: none;
+                    margin-left: 0;
+
+                }
+            }
+
+            .block {
+                padding-bottom: 80px;
+                .row-flex();
+
+                &__item {
+                    .col();
+                    .size(3);
+                    .size-md(6);
+                    .size-sm(6);
+                    .size-xs(12);
+                    color: #ffffff;
+                    margin-top: 25px;
+
+                    .icon {
+                        width: 34px;
+                        height: 48px;
+                    }
+
+                    h3 {
+                        font-family: "Segoe UI - Semi Bold";
+                        font-size: 24px;
+                        font-weight: 400;
+                        text-transform: uppercase;
+                        padding-top: 15px;
+                        padding-bottom: 10px;
+                    }
+
+                    p {
+                        font-family: "Segoe UI - Semi Bold";
+                        font-size: 12px;
+                        font-weight: 400;
+                        line-height: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+    .portfolio {
+
+        .wrapper();
+
+        &__top {
+            display: flex;
+            justify-content: space-between;
+            margin: 80px 0;
+
+            h2 {
+                color: #515f67;
+                font-family: "Segoe UI";
+                font-size: 30px;
+                font-weight: 300;
+                line-height: 24px;
+                text-transform: uppercase;
+            }
+
+            hr {
+                width: 45px;
+                height: 2px;
+                background: #000;
+                border: none;
+                margin-left: 0;
+            }
+
+            .nav {
+                ul {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 550px;
+
+                    .nav__list {
+                        .nav__link {
+                            color: #515f67;
+                            font-family: "Segoe UI";
+                            font-size: 14px;
+                            font-weight: 700;
+                            line-height: 24px;
+                            text-transform: uppercase;
+                            text-decoration: none;
+                            padding: 10px 20px;
+
+                            &:hover {
+                                outline: 2px solid rgb(75, 202, 255);
+                                color: rgb(75, 202, 255);
+                                transition: color 0.2s linear;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+        &__cards {
+            .row-flex();
+
+            .card {
+                .col();
+                .size(3);
+
+                &__overlay {
+                    display: flex;
+                    background-color: #000;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 99;
+                    // opacity: 0;
+
+                    &__icon {
+                        display: block;
+                        margin: auto;
+                        cursor: pointer;
+                    }
+
+                    &:hover {
+                        opacity: .8;
+                    }
+                }
+            }
+        }
+    }
+}
