@@ -377,6 +377,8 @@ main .portfolio__cards {
 }
 
 main .portfolio__cards .card {
+  margin-top: 30px;
+  position: relative;
   box-sizing: border-box;
   word-wrap: break-word;
   margin-left: 15px;
@@ -384,7 +386,7 @@ main .portfolio__cards .card {
   width: calc(25% - 30px);
 }
 
-main .portfolio__cards .card__overlay {
+main .portfolio__cards .card__hover {
   display: flex;
   background-color: #000;
   width: 100%;
@@ -393,16 +395,22 @@ main .portfolio__cards .card__overlay {
   top: 0;
   left: 0;
   z-index: 99;
+  opacity: 0;
 }
 
-main .portfolio__cards .card__overlay__icon {
+main .portfolio__cards .card__hover .icon {
   display: block;
   margin: auto;
   cursor: pointer;
 }
 
-main .portfolio__cards .card__overlay:hover {
+main .portfolio__cards .card__hover:hover {
   opacity: 0.8;
+}
+
+main .portfolio__cards .card__foto {
+  height: 100%;
+  width: 100%;
 }
 
 @media screen and (max-width: 992px) {
@@ -424,16 +432,28 @@ main .portfolio__cards .card__overlay:hover {
     padding-left: 15px;
     padding-right: 15px;
   }
+
+  main .portfolio__cards .card {
+    width: calc(33.333333333333336% - 30px);
+  }
 }
 
 @media screen and (max-width: 768px) {
   main .services__inner .block__item {
     width: calc(50% - 30px);
   }
+
+  main .portfolio__cards .card {
+    width: calc(50% - 30px);
+  }
 }
 
 @media screen and (max-width: 576px) {
   main .services__inner .block__item {
+    width: calc(100% - 30px);
+  }
+
+  main .portfolio__cards .card {
     width: calc(100% - 30px);
   }
 }
