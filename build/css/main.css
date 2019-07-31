@@ -159,7 +159,7 @@ img {
 }
 
 .header__inner {
-  max-width: 1200px;
+  max-width: 1170px;
   margin: 0 auto;
   padding-left: 30px;
   padding-right: 30px;
@@ -207,7 +207,6 @@ img {
 .header .nav__link:hover {
   outline: 2px solid #4bcaff;
   color: #4bcaff;
-  transition: color 0.2s linear;
 }
 
 .intro {
@@ -249,7 +248,7 @@ main .services {
 }
 
 main .services__inner {
-  max-width: 1200px;
+  max-width: 1170px;
   margin: 0 auto;
   padding-left: 30px;
   padding-right: 30px;
@@ -317,7 +316,7 @@ main .services__inner .block__item p {
 }
 
 main .portfolio {
-  max-width: 1200px;
+  max-width: 1170px;
   margin: 0 auto;
   padding-left: 30px;
   padding-right: 30px;
@@ -366,7 +365,6 @@ main .portfolio__top .nav ul .nav__list .nav__link {
 main .portfolio__top .nav ul .nav__list .nav__link:hover {
   outline: 2px solid #4bcaff;
   color: #4bcaff;
-  transition: color 0.2s linear;
 }
 
 main .portfolio__cards {
@@ -374,6 +372,7 @@ main .portfolio__cards {
   flex-wrap: wrap;
   margin-left: -15px;
   margin-right: -15px;
+  margin-bottom: 80px;
 }
 
 main .portfolio__cards .card {
@@ -413,6 +412,76 @@ main .portfolio__cards .card__foto {
   width: 100%;
 }
 
+main .default-section {
+  background-color: rgba(53, 63, 71, 0.7);
+  padding-bottom: 80px;
+}
+
+main .default-section .section__inner {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  margin: auto;
+  justify-content: space-between;
+}
+
+main .default-section .section__inner .section-content {
+  max-width: 468px;
+  margin-top: 80px;
+}
+
+main .default-section .section__inner .section-content h2 {
+  color: #ffffff;
+  font-family: "Segoe UI";
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 24px;
+  text-transform: uppercase;
+  margin-bottom: 51px;
+}
+
+main .default-section .section__inner .section-content p {
+  color: #ffffff;
+  font-family: "Segoe UI";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 36px;
+}
+
+main .default-section .section__inner .section-content .btn {
+  padding: 12px 41px;
+  border: 2px solid #353f46;
+  background-color: inherit;
+  color: #353f46;
+  font-family: "Segoe UI";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+main .default-section .section__inner .section-content .btn:hover {
+  background-color: #4bcaff;
+  transition: background-color 0.2s linear;
+}
+
+main .default-section .section__inner .section-video {
+  margin-top: 80px;
+  width: 555px;
+}
+
+main .default-section .section__inner .section-video img {
+  width: 100%;
+  height: 100%;
+}
+
 @media screen and (max-width: 992px) {
   .header__inner {
     padding-left: 15px;
@@ -435,6 +504,11 @@ main .portfolio__cards .card__foto {
 
   main .portfolio__cards .card {
     width: calc(33.333333333333336% - 30px);
+  }
+
+  main .default-section .section__inner {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
